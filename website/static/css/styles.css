@@ -1,0 +1,32 @@
+.b{border:solid thin #ddd;}
+.box{overflow: hidden;}
+
+#home{min-height: 520px;width: 100%;text-align: center;}
+#home .home-container{text-align: center;margin-top: 20px;}
+#home nav{margin: 15px 0 40px 0;}
+#home nav a{color: white;padding: 10px 0;text-transform: uppercase;border-bottom: solid thin #ddd; display: inline-block;width: 85px;margin:10px;}
+#home #logo-principal h1{margin: 0;padding: 0;display: none;}
+
+#home #description{color: white;}
+#home #description > div{border-radius: 5px;border:solid thin #ddd;display: inline-block;padding: 10px;width: 70%;}
+#home #description h2{font-size: 20px;margin: 10px;}
+
+
+
+@media screen and (min-width: 480px){
+}
+@media screen and (min-width: 700px){
+	#home .home-container{margin-top: 100px;}
+	#home nav{position: relative; top: -120px;margin-bottom: -30px;}
+	#home nav a.second{margin-right: 150px;}
+	#home nav a.third{margin-left: 150px;}
+	#logo-principal{margin: -30px !important;}
+	#home #description > div{width: 50%;}
+}
+@media screen and (min-width: 767px){
+	#home #description > div{width: 40%;}
+}
+
+@media screen and (min-width: 992px){
+	#home #description > div{width: 30%;}
+}

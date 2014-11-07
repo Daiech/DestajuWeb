@@ -1,0 +1,33 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags i18n %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Destaju{% endblock title %}</title>
+    <link rel="icon" href="{{ STATIC_URL }}favicon.png" type="image/png" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css">
+    {% render_block "css" %}
+  </head>
+  <body>
+    {% cms_toolbar %}
+    <!-- {% include "top_bar.html" %} -->
+    {% block content %}
+    {% endblock content %}
+    <footer>{% static_placeholder "footer" %}</footer>
+    
+    <!-- // <script src="//code.jquery.com/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery.min.js"><\/script>')</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    {% render_block "js" %}
+    <script type="text/javascript">
+        // var _gaq=[['_setAccount',''],['_trackPageview']];
+        //   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        //   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        //   s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>
+

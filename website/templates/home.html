@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load cms_tags staticfiles sekizai_tags menu_tags placeholder_attr i18n %}
+
+{% block content %}
+<div id="home" style="{% placeholder_attr 'home' 'CssBackground' 'css_background' %}">
+  {% placeholder "home" %}
+  <div class="home-container">
+    <a href="/" id="logo-principal">
+      <h1>Destaju - Plataforma de pagos a destajo</h1>
+      <img src="{{ STATIC_URL }}img/logo-principal.png" width="340px" class="img-responsives">
+    </a>
+    <nav>
+      <a href="/#home">{% trans 'Inicio' %}</a>
+      <a href="/#benefits" class="second">{% trans 'Beneficios' %}</a>
+      <a href="/#sectors" class="third">{% trans 'Sectores' %}</a>
+      <a href="/#contact">{% trans 'Contacto' %}</a>
+    </nav>
+    <div id="description" class="text-center">
+      <div>
+        <h2>{% trans 'Administre y supervice fácilmente las actividades de sus colaboradores' %}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  {% placeholder "benefits" %}
+</div>
+<div>
+  {% placeholder "sectors" %}
+</div>
+<div>
+  {% placeholder "contact" %}
+</div>
+{% endblock content %}
