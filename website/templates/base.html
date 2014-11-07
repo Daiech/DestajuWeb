@@ -13,8 +13,10 @@
   <body>
     {% cms_toolbar %}
     <!-- {% include "top_bar.html" %} -->
+    <div class="content">
     {% block content %}
     {% endblock content %}
+    </div>
     <footer>{% static_placeholder "footer" %}</footer>
     
     <!-- // <script src="//code.jquery.com/jquery.min.js"></script> -->

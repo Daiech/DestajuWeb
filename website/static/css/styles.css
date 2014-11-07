@@ -1,7 +1,10 @@
 .b{border:solid thin #ddd;}
 .box{overflow: hidden;}
 
-#home{min-height: 520px;width: 100%;text-align: center;}
+.content > div{padding: 50px 0;}
+.content > div h2{color: #537384;}
+
+#home{min-height: 520px;width: 100%;text-align: center;padding: 0 !important;}
 #home .home-container{text-align: center;padding-top: 20px;}
 #home nav{margin: 15px 0 40px 0;}
 #home nav a{color: white;padding: 10px 0;text-transform: uppercase;border-bottom: solid thin #ddd; display: inline-block;width: 100px;margin:10px;font-size: 15px;}
@@ -10,7 +13,7 @@
 
 #home #description{color: white;}
 #home #description > div{border-radius: 5px;border:solid thin #ddd;display: inline-block;padding: 10px;width: 70%;}
-#home #description h2{font-size: 20px;margin: 10px;}
+#home #description h2{font-size: 20px;margin: 10px;color: white;}
 
 
 
