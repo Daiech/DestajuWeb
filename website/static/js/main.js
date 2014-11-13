@@ -60,6 +60,7 @@ function goToByScroll(element, callback){
 $(document).ready(function () {
     $("#home nav a").on('click', function(e) {
       e.preventDefault();
-      goToByScroll(this.hash, function (e) {});
+      var hash = this.hash;
+      goToByScroll(hash, function (e) {if (hash == "#contact") {setTimeout(function(){$("#id_email").focus()}, 1)};});
     });
 });

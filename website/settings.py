@@ -34,7 +34,7 @@ ADMINS = (
     ('Edwin Mesa', 'emesa@daiech.com'),
 )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.destaju.com', '.destaju.com.',]
 
 
 # Application definition

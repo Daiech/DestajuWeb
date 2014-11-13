@@ -5,10 +5,12 @@
 <div id="home" style="{% placeholder_attr 'home' 'CssBackground' 'css_background' %}">
   {% placeholder "home" %}
   <div class="home-container">
-    <a href="/" id="logo-principal">
-      <h1>Destaju - {% trans 'Plataforma de pagos a destajo' %}</h1>
-      <img src="{{ STATIC_URL }}img/logo-centro-peq.png" width="340px" class="img-responsives">
-    </a>
+    <div id="logo">
+      <a href="/" id="logo-principal">
+        <h1>Destaju - {% trans 'Plataforma de pagos a destajo' %}</h1>
+        <img src="{{ STATIC_URL }}img/logo-centro-peq.png" width="340px" class="img-responsive">
+      </a>
+    </div>
     <nav id="menu">
       <a href="/#home" id="home-link">{% trans 'Inicio' %}</a>
       <a href="/#benefits" class="second">{% trans 'Beneficios' %}</a>
@@ -17,7 +19,7 @@
     </nav>
     <div id="description" class="text-center">
       <div>
-        <h2>{% trans 'Administre y supervice fácilmente las actividades de sus colaboradores' %}</h2>
+        <h2>{% trans 'Administre y supervise fácilmente las actividades de sus colaboradores' %}</h2>
       </div>
     </div>
   </div>
@@ -27,11 +29,6 @@
 </div>
 <div id="sectors" style="{% placeholder_attr 'sectors' 'CssBackground' 'css_background' %}">
   {% placeholder "sectors" %}
-  <div class="text-center">
-    <a href="http://destaju.com/agro">
-      <img class="filer_image img-responsive" alt="categorias1.png" src="/media/filer_public_thumbnails/filer_public/a0/97/a0978ed0-59c6-4577-88c4-67845450f3f1/sinagro.png__1429x718_q85_crop_subject_location-748%2C319_subsampling-2_upscale.png">
-    </a>
-  </div>
 </div>
 <div id="contact">
   {% placeholder "contact" %}
@@ -40,18 +37,18 @@
 {% addtoblock "js" %}
 <script type="text/javascript">
   $(document).ready(function () {
+    $("#sectors img").addClass("img-responsive");
     $('#home-link').waypoint(function(direction) {
-      // alert('Top of thing hit top of viewport.');
-      // $("#home").toggleClass("menu");
-      if (!$("#menu").hasClass("menu")){
-        $("#menu").addClass("menu");
-        $("#logo-principal").addClass("logo-principal");
-        console.log("menu estático");
-      }else{
-        $("#menu").removeClass("menu");
-        $("#logo-principal").removeClass("logo-principal");
-        console.log("Quitar menu estático");
-      }
+      if ($(window).width() >= 768) {
+        if (!$("#menu").hasClass("menu")){
+          $("#menu").addClass("menu");
+          $("#logo").addClass("logo-principal");
+          console.log("menu estático");
+        }else{
+          $("#menu").removeClass("menu");
+          $("#logo").removeClass("logo-principal");
+        }
+      };
     });
   });
 </script>
