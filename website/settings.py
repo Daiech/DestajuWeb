@@ -153,7 +153,8 @@ INSTALLED_APPS = (
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
-    'website'
+    'website',
+    'apps.general'
 )
 INSTALLED_APPS += (
     'cmsplugin_filer_file',
