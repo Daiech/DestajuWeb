@@ -27,6 +27,8 @@ try:
 except ImportError:
     DEBUG = True
 
+URL_BASE = "http://destaju.com"
+
 TEMPLATE_DEBUG = True
 
 ADMINS = (
@@ -114,7 +116,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'sekizai.context_processors.sekizai',
     'django.core.context_processors.static',
-    'cms.context_processors.cms_settings'
+    'cms.context_processors.cms_settings',
+    'website.context_processors.is_debug',
+    'website.context_processors.url_base'
+    
 )
 
 TEMPLATE_DIRS = (
