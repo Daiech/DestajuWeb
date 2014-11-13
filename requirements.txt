@@ -30,3 +30,4 @@ ipython==2.3.0
 psycopg2==2.5.4
 djangocms-css-background
 cmsplugin_contact
+django-rosetta

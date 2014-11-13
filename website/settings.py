@@ -171,6 +171,7 @@ INSTALLED_APPS += (
     'djangocms-css-background',
     'djangocms-placeholder-attr',
     'cmsplugin_contact',
+    'rosetta',
 )
 
 THUMBNAIL_PROCESSORS = (
