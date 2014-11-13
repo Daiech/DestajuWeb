@@ -2,37 +2,69 @@
 .box{overflow: hidden;}
 
 .content > div{padding: 50px 0;}
-.content > div h2{color: #537384;}
+.content > div h2{color: #537384;font-family: 'Signika', sans-serif;font-size: 40px;}
 
 #home{min-height: 520px;width: 100%;text-align: center;padding: 0 !important;}
 #home .home-container{text-align: center;padding-top: 20px;}
-#home nav{margin: 15px 0 40px 0;}
+#home nav{margin: 15px 0 40px 0;transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -webkit-transition: opacity 0.4s ease-out;}
 #home nav a{color: white;padding: 10px 0;text-transform: uppercase;border-bottom: solid thin #ddd; display: inline-block;width: 100px;margin:10px;font-size: 15px;}
 #home nav a:hover{text-decoration: none;border-bottom: solid thin white;color: white;}
+#home #logo-principal img{width: 100%;}
 #home #logo-principal h1{margin: 0;padding: 0;display: none;}
+
+.menu{position: fixed;top: 0;text-align: center;width: 100%;margin-top: -10px !important;background-color: rgba(73, 73, 73, 0.8);z-index: 5;}
+.menu a{top: 5px !important;border: none !important;}
+.logo-principal{top: -20px;position: fixed;left: 0;right: 0;z-index: 6;}
 
 #home #description{color: white;}
 #home #description > div{border-radius: 5px;border:solid thin #ddd;display: inline-block;padding: 10px;width: 70%;}
 #home #description h2{font-size: 20px;margin: 10px;color: white;}
 
+#benefits *{font-family: 'Titillium Web', sans-serif;}
+
+#contact{text-align: left;}
+#contact .control-labels{padding-left: 15px}
+#contact #id_content{height: 120px;}
+#contact input[type='text'], #contact input[type='email'], #contact textarea{width: 100%;}
+#contact input[type='submit']{background-color: #537384;background-image:none;color: white;font-family: 'Titillium Web', sans-serif;}
+#contact label {margin-bottom: 0px;}
 
 
+
+body > footer{background-color: #0b1b2a; color: white;min-height: 170px;padding: 70px 0;font-family: 'Titillium Web', sans-serif;}
+body > footer .row-fluid > .info{margin-bottom: 20px;}
+body > footer .info *{text-align: center !important;}
+body > footer a{color: white;}
+body > footer a:hover{color: white;}
+
+@media screen and (min-width: 360px){
+	#home #logo-principal img{width: 340px;}
+}
 @media screen and (min-width: 480px){
 	#home{min-height: 445px;}
+	#contact input[type='text'], #contact input[type='email'], #contact textarea{width: 50%;}
 }
 @media screen and (min-width: 700px){
 	#home .home-container{padding-top: 100px;}
 	#home nav{margin-bottom: -30px;}
-	#home nav a{position: relative; top: -120px;}
+	#home nav a{position: relative; top: -120px;}/*
 	#home nav a.second{margin-right: 150px;}
-	#home nav a.third{margin-left: 150px;}
+	#home nav a.third{margin-left: 150px;}*/
 	#logo-principal{margin: -30px !important;}
 	#home #description > div{width: 50%;}
+	#home nav a.second{margin-right: 120px;}
+	#home nav a.third{margin-left: 130px;}
 }
 @media screen and (min-width: 767px){
 	#home #description > div{width: 40%;}
+	#contact .contact-info{text-align: right;}
+	#contact input[type='text'], #contact input[type='email'], #contact textarea{width: 50%;}
 }
-
 @media screen and (min-width: 992px){
+	#home nav a.second{margin-right: 150px;}
+	#home nav a.third{margin-left: 150px;}
 	#home #description > div{width: 30%;}
 }

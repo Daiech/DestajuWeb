@@ -3,11 +3,13 @@
 <html>
   <head>
     <title>{% block title %}Destaju{% endblock title %}</title>
-    <link rel="icon" href="{{ STATIC_URL }}favicon.png" type="image/png" >
+    <link rel="icon" href="{{ STATIC_URL }}img/favicons/favicon4.png" type="image/png" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
     {% render_block "css" %}
   </head>
   <body>
@@ -17,12 +19,13 @@
     {% block content %}
     {% endblock content %}
     </div>
-    <footer>{% static_placeholder "footer" %}</footer>
+    <footer><div class="container">{% static_placeholder "footer" %}</div></footer>
     
     <!-- // <script src="//code.jquery.com/jquery.min.js"></script> -->
     <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery.min.js"><\/script>')</script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="{{ STATIC_URL }}js/main.js"></script>
+    <script src="{{ STATIC_URL }}js/waypoints.min.js"></script>
     {% render_block "js" %}
     <script type="text/javascript">
         // var _gaq=[['_setAccount',''],['_trackPageview']];

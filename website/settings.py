@@ -99,7 +99,8 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'cmsplugin_contact.middleware.ForceResponseMiddleware'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -149,15 +150,35 @@ INSTALLED_APPS = (
     'reversion',
     'website'
 )
-
+INSTALLED_APPS += (
+    'cmsplugin_filer_file',
+    'cmsplugin_filer_folder',
+    'cmsplugin_filer_link',
+    'cmsplugin_filer_image',
+    'cmsplugin_filer_teaser',
+    'cmsplugin_filer_video',
+)
 
 INSTALLED_APPS += (
     "filer",
     "mptt",
     "easy_thumbnails",
     'djangocms-css-background',
-    'djangocms-placeholder-attr'
+    'djangocms-placeholder-attr',
+    'cmsplugin_contact',
 )
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+
+
+
 
 LANGUAGES = (
     ## Customize this
@@ -209,3 +230,8 @@ except ImportError:
     }
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
+
+try:
+    from .local_settings import DEFAULT_FROM_EMAIL
+except ImportError:
+    DEFAULT_FROM_EMAIL = "no-reply@daiech.com"

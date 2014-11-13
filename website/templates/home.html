@@ -6,11 +6,11 @@
   {% placeholder "home" %}
   <div class="home-container">
     <a href="/" id="logo-principal">
-      <h1>Destaju - Plataforma de pagos a destajo</h1>
-      <img src="{{ STATIC_URL }}img/logo-principal.png" width="340px" class="img-responsives">
+      <h1>Destaju - {% trans 'Plataforma de pagos a destajo' %}</h1>
+      <img src="{{ STATIC_URL }}img/logo-centro-peq.png" width="340px" class="img-responsives">
     </a>
-    <nav>
-      <a href="/#home">{% trans 'Inicio' %}</a>
+    <nav id="menu">
+      <a href="/#home" id="home-link">{% trans 'Inicio' %}</a>
       <a href="/#benefits" class="second">{% trans 'Beneficios' %}</a>
       <a href="/#sectors" class="third">{% trans 'Sectores' %}</a>
       <a href="/#contact">{% trans 'Contacto' %}</a>
@@ -22,13 +22,39 @@
     </div>
   </div>
 </div>
-<div>
+<div id="benefits">
   {% placeholder "benefits" %}
 </div>
-<div>
+<div id="sectors" style="{% placeholder_attr 'sectors' 'CssBackground' 'css_background' %}">
   {% placeholder "sectors" %}
+  <div class="text-center">
+    <a href="http://destaju.com/agro">
+      <img class="filer_image img-responsive" alt="categorias1.png" src="/media/filer_public_thumbnails/filer_public/a0/97/a0978ed0-59c6-4577-88c4-67845450f3f1/sinagro.png__1429x718_q85_crop_subject_location-748%2C319_subsampling-2_upscale.png">
+    </a>
+  </div>
 </div>
-<div>
+<div id="contact">
   {% placeholder "contact" %}
 </div>
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#home-link').waypoint(function(direction) {
+      // alert('Top of thing hit top of viewport.');
+      // $("#home").toggleClass("menu");
+      if (!$("#menu").hasClass("menu")){
+        $("#menu").addClass("menu");
+        $("#logo-principal").addClass("logo-principal");
+        console.log("menu estático");
+      }else{
+        $("#menu").removeClass("menu");
+        $("#logo-principal").removeClass("logo-principal");
+        console.log("Quitar menu estático");
+      }
+    });
+  });
+</script>
+{% endaddtoblock %}
+
 {% endblock content %}

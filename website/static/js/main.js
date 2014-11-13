@@ -57,3 +57,9 @@ function goToByScroll(element, callback){
         scrollTop: $(element).offset().top - 10},
         'slow', callback);
 }
+$(document).ready(function () {
+    $("#home nav a").on('click', function(e) {
+      e.preventDefault();
+      goToByScroll(this.hash, function (e) {});
+    });
+});
