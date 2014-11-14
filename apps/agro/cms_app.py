@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class AgroApp(CMSApp):
     name = _("Agro App")  # give your app a name, this is required
-    urls = ["agro.urls"]  # link your app to url configuration(s)
+    urls = ["apps.agro.urls"]  # link your app to url configuration(s)
     app_name = "agro"
 
 apphook_pool.register(AgroApp)  # register your app
