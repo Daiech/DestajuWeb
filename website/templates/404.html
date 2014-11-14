@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Error 404{% endblock title %}
+{% block content %}
+<h1>{% trans 'Error, página no encontrada' %}</h1>
+<p class="lead">{% trans 'No encontramos la página que buscaba' %}.</p>
+<p class="lead">{% trans 'Intente de nuevo o vaya al <a href="/">inicio</a>' %}</p>
+{% endblock content %}

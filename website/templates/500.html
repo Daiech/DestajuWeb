@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load sekizai_tags i18n %}
+{% block title %}{% trans 'Error 500' %}{% endblock title %}
+{% block content %}
+<h1>{% trans 'Error' %} :(</h1>
+<p class="lead">{% trans 'Ocurrió un error en el servidor' %}.</p>
+<p class="lead">{% trans 'Pero no se preocupe, ya obtuvimos el reporte del fallo y nuestros ingenieros trabajan árduamente para solucionalo' %}.</p>
+<p>{% trans 'Si el fallo continúa, por favor comuniquese con el administrador del sistema' %}.</p>
+{% endblock content %}
