@@ -124,6 +124,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'website', 'templates'),
+    os.path.join(BASE_DIR, 'templates').replace('\\', '/')
 )
 
 INSTALLED_APPS = (
@@ -154,7 +155,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'website',
-    'apps.general'
+    'apps.general',
+    'apps.agro',
 )
 INSTALLED_APPS += (
     'cmsplugin_filer_file',
@@ -221,6 +223,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('home.html', 'Home'),
+    ('agro/home.html', 'Agro Home'),
     ('feature.html', 'Page with Feature')
 )
 
