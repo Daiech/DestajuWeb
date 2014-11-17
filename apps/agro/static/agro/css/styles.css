@@ -1,0 +1,64 @@
+.navbar-agro{margin-top: 55px;}
+.navbar-agro *{color: #a7a6a5;font-family: 'Titillium Web', sans-serif;font-size: 20px;}
+.nav>li>a:hover, .nav>li>a:focus{color: #e89538;}
+.navbar-toggle{border-color: #ddd;top: 60px;}
+.navbar-toggle .icon-bar{background-color: #e89538;}
+
+
+/**************HOME*****************/
+#home-agro{min-height: 400px;color: white;padding-bottom: 0px;}
+#home-agro h2{color: white;font-size: 36px;}
+#home-agro h3{color: white;font-size: 30px;}
+#home-agro .agro-text{color: white;}
+#home-agro .agro-text h2{font-size: 30px;margin: 0;margin-bottom: 15px;}
+#home-agro .agro-text p{font-size: 20px;margin-bottom: 30px;}
+#home-agro a.btn-action{position: absolute;top: 115px;top: calc(50% - 60px);width: 186px;height: 63px;z-index: 9;left: 33%;left: calc(51% - 100px);}
+#home-agro a.btn-action p{position: absolute;margin: 0;left: 0;right: 0;color: white;font-size: 28px;font-family: 'Titillium Web', sans-serif;line-height: 2.35;z-index: 9;}
+#home-agro a.btn-action:hover img{transform: rotate(3deg);z-index: 1;}
+
+
+/****************BENEFITS*******************/
+#benefits{padding: 0;}
+#benefits > div{min-height: 350px;padding-top: 100px;}
+#benefits .info.col-md-6{min-height: 200px;}
+#benefits h3{font-size: 30px;}
+#benefits p{font-size: 20px;color: #727272;}
+
+
+/*********contact********/
+#contact input[type='submit'] {background-color: #e89538;}
+
+/*************DEMO*************/
+#demo{padding: 0;padding-top: 20px;}
+#demo img{max-width: 300px;}
+#demo p{color: #727272;font-size: 18px;}
+.try-demo{text-align: center;height: 70px;margin: 25px 0 0;}
+.demo-link{background-image: url('/media/filer_public_thumbnails/filer_public/63/67/63675d51-be75-4dc5-8387-f6c4d3137b70/adquir.png__186x63_q85_crop_subsampling-2_upscale.png');display: inline-block;width: 186px;height: 63px;color: white;}
+.demo-link:hover{color: white; text-decoration: underline;transform: rotate(-2deg);}
+.demo-link p{position: relative;top: 19px;font-size: 22px !important;text-align: center;color: white !important;}
+
+/***footer***/
+body > footer{background-color:#e89538; }
+
+@media screen and (min-width: 360px){
+	#home-agro .agro-text h2{font-size: 35px;}
+}
+@media screen and (min-width: 480px){
+	#home-agro .agro-text h2{font-size: 40px;}
+	#home-agro a.btn-action{top: 115px;top: calc(50% - 80px)}
+}
+@media screen and (min-width: 700px){
+}
+@media screen and (min-width: 767px){
+	#home-agro .agro-text h2{margin-top: 10px;}
+	#home-agro .agro-text p{max-width: 378px;margin: auto;margin-bottom: 30px;}
+	#benefits .info.col-md-6{min-height: 300px;}
+	#benefits h3{font-size: 38px;}
+	#benefits p{font-size: 24px;}
+	.lg-right{float: right !important;}
+	.lg-left{float: left !important;}
+}
+@media screen and (min-width: 992px){
+	#home-agro{max-height: 418px;}
+	#home-agro .agro-text h2{margin-top: 50px;}
+}

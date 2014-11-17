@@ -2,7 +2,7 @@
 .box{overflow: hidden;}
 
 .content > div{padding: 50px 0;}
-.content > div h2{color: #537384;font-family: 'Signika', sans-serif;font-size: 40px;}
+.content > div h2{color: #537384;font-family: 'Signika', sans-serif !important;font-size: 40px;}
 
 #home{min-height: 520px;width: 100%;text-align: center;padding: 0 !important;}
 #home .home-container{text-align: center;padding-top: 20px;}
