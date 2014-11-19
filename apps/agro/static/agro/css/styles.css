@@ -4,6 +4,11 @@
 .navbar-toggle{border-color: #ddd;top: 60px;}
 .navbar-toggle .icon-bar{background-color: #e89538;}
 
+.menu{margin-top: 0 !important;z-index: 10;border-radius: 0;background-color: rgba(29, 14, 0, 0.7)}
+.menu .navbar-agro{margin-top: 0px;}
+.menu .navbar-brand{height: 60px;}
+.menu .navbar-brand img{margin-top: -67px;}
+
 
 /**************HOME*****************/
 #home-agro{min-height: 400px;color: white;padding-bottom: 0px;}

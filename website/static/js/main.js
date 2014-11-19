@@ -58,7 +58,7 @@ function goToByScroll(element, callback){
         'slow', callback);
 }
 $(document).ready(function () {
-    $("#home nav a").on('click', function(e) {
+    $("#home nav a, .home-agro nav a").on('click', function(e) {
       e.preventDefault();
       var hash = this.hash;
       goToByScroll(hash, function (e) {if (hash == "#contact") {setTimeout(function(){$("#id_email").focus()}, 1)};});

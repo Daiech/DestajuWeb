@@ -30,8 +30,8 @@
 	</div>
 	<script type="text/template" id="try-demo-tpl">
 		<a class="btn-action" href="#">
-	   		<p>Pruébalo</p>
-	   		<img alt="Pruébalo" src="/media/filer_public_thumbnails/filer_public/ae/b7/aeb7dcd6-1d4f-4a3a-925d-7fff7bc3a722/cinta-sola.png__186x63_q85_crop_subsampling-2_upscale.png" title="Prueba nuestro demo ¡Gratis!" />
+	   		<p>{% trans 'Pruébalo' %}</p>
+	   		<img alt="{% trans 'Pruébalo' %}" src="/media/filer_public_thumbnails/filer_public/ae/b7/aeb7dcd6-1d4f-4a3a-925d-7fff7bc3a722/cinta-sola.png__186x63_q85_crop_subsampling-2_upscale.png" title="Prueba nuestro demo ¡Gratis!" />
 	   	</a>
 	</script>
 	<script type="text/template" id="try-demo-link"><a href="http://demo.destaju.com" class="demo-link"><p>{% trans 'Pruebe el Demo' %}</p></a></script>
@@ -41,6 +41,18 @@
     $("#home-agro img, #demo img").addClass("img-responsive");
     $(".pc-div").prepend($("#try-demo-tpl").html());
     $(".try-demo").append($("#try-demo-link").html());
+    $('#benefits-link').waypoint(function(direction) {
+      if ($(window).width() >= 768) {
+        if (!$("#menu").hasClass("menu")){
+          $("#menu").addClass("menu");
+          $("#logo").addClass("logo-principal");
+          console.log("menu estático");
+        }else{
+          $("#menu").removeClass("menu");
+          $("#logo").removeClass("logo-principal");
+        }
+      };
+    });
   });
 </script>
 {% endaddtoblock %}
