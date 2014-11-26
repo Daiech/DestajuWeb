@@ -79,7 +79,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = "/home/dev/.statics/DestajuWeb"
 
 STATICFILES_DIRS = (
-    # os.path.join(BASE_DIR, 'website', 'static'),
+    os.path.join(BASE_DIR, 'website', 'static'),
     os.path.join(BASE_DIR , 'static').replace('\\','/'),
 )
 SITE_ID = 1
