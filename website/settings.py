@@ -41,6 +41,12 @@ ALLOWED_HOSTS = ['.destaju.com', '.destaju.com.', "104.131.185.107"]
 
 # Application definition
 
+ADMINS = (
+    ('Mauricio Aizaga', 'maizaga@daiech.com'),
+    ('Edwin Mesa', 'emesa@daiech.com'),
+    ('Destaju Page', 'destaju@daiech.com'),
+)
+
 
 
 
